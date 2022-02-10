@@ -1,0 +1,29 @@
+.add-book {
+    width: 350px;
+    margin-top: 25px;
+    margin-left: 50px;
+    .add-book-form {
+      width: 250px;
+      .book-description {
+        width: 100%;
+      }
+      .book-title {
+        width: 100%;
+      }
+      .book-authorName{
+        width: 100%;
+      }
+      .book-publishedDate{
+        width: 100%;
+      }
+    }
+    .add-book-button{
+      color: rgb(233, 233, 233);
+      background-color: rgb(61, 184, 23);
+    }
+    .errorMessage{
+      color: red;
+    }
+    
+  }
+  

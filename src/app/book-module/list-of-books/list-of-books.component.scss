@@ -1,0 +1,35 @@
+.book {
+  width: 200px;
+  height: 350px;
+  float: left;
+  margin: 20px 20px 50px 30px;
+  display: flex;
+  flex-direction: column;
+
+  .book-title {
+    flex-shrink: 0;
+  }
+
+  .book-content {
+    flex-grow: 1;
+    overflow: auto;
+  }
+
+  .book-buttons {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(212, 91, 42);
+  }
+}
+
+.add-book-card {
+  width: 200px;
+  height: 200px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(99, 230, 110);
+  margin: 20px 10px 20px 10px;
+}
+

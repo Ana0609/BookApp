@@ -1,0 +1,50 @@
+<div>
+    <button (click) = "redirectToList()" mat-fab><mat-icon>home</mat-icon></button>
+</div>
+
+<br><br>
+
+
+
+<div class="textSerach">
+    <!-- <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search" (change)="InputChanged($event)"> -->
+    <input class="text-input" type="text" [(ngModel)]="searchText" placeholder="Search">
+  </div>
+<button
+    class="cancel-book-button"
+    mat-raised-button
+    color="primary"
+    (click)="InputChanged()"
+    >
+    Search in list of books
+</button>
+<div class="edit-book">
+    <h1 class="page-title">Book</h1>
+    <form class="edit-book-form" autocomplete="off">
+        <mat-form-field class="book-title">
+            Title:  <br>
+            {{title}}
+        </mat-form-field>
+        <br>
+        <mat-form-field class="book-description">
+            Description: <br>
+            {{description}}
+        </mat-form-field>
+        <br>
+        <mat-form-field class="book-authorName">
+            Author Name: <br>
+            {{authorName}}
+        </mat-form-field>
+        <br>
+        <mat-form-field class="book-publishedDate">
+            Published Date: <br>
+            {{date}}
+        </mat-form-field>
+    </form>
+</div>
+
+<div>
+    <h2 class = "errorMessage">
+        {{ couldNotBeFound }}
+    </h2>
+</div>

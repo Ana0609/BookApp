@@ -1,0 +1,67 @@
+<div>
+  <button (click) = "gotoHome()" mat-fab><mat-icon>home</mat-icon></button>
+</div>
+<h2> My books</h2>
+
+<button
+class="cancel-book-button"
+mat-raised-button
+color="primary"
+(click)="goToSearch()"
+>
+Search in list of books
+</button>
+
+<article>
+  <h2><span>Select a type of sorting:</span></h2>
+  <select (change)="selectChangeHandler($event)">
+      <option value="asc-title">Ascending By Title</option>
+      <option value="desc-title">Descending By Title</option>
+      <option value="asc-description">Ascending By Description</option>
+      <option value="desc-description">Descending By Description</option>
+      <option value="asc-authorName">Ascending By Author Name</option>
+      <option value="desc-authorName">Descending By Author Name</option>
+      <option value="asc-publishedDate">Ascending By Published Date</option>
+      <option value="desc-publishedDate">Descending By Published Date</option>
+  </select>
+</article>
+
+
+<div *ngFor="let book of books">
+    <mat-card class="book">
+      <mat-card-header>
+        <mat-card-title class="book-title">
+          {{ book.title }}
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="book-content">
+        <p>
+          <label for="book-content">Description:</label>
+        </p>
+        <p>
+          {{ book.description }}
+        </p>
+        <p>
+          <label for="book-content">Author Name:</label>
+        </p>
+        <p>
+            {{ book.authorName }}
+        </p>
+        <p>
+          <label for="book-content">Published Date:</label>
+        </p>
+        <p>
+            {{ book.publishedDate }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="book-buttons">
+        <div>
+          <button (click) = "gotoEditBook(book)" mat-icon-button><mat-icon>edit</mat-icon></button>
+          <button (click) = "remove(book.id)" mat-icon-button><mat-icon>delete</mat-icon></button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+ </div>
+  <mat-card class="add-book-card">
+    <button (click) = "gotoAddBook()" mat-icon-button><mat-icon>add</mat-icon></button>
+  </mat-card>

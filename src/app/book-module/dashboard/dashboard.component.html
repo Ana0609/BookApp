@@ -1,0 +1,11 @@
+<div>
+    <!-- <button  mat-fab><mat-icon>home</mat-icon></button> -->
+    <button (click) = "gotoListOfBooks()" mat-raised-button>List Of Books</button>
+</div>
+<h2> Top Books</h2>
+<div class="books-menu">
+    <a *ngFor="let book of topBooksarray"
+        routerLink="/detail/{{book.id}}">
+       {{book.title}} 
+    </a>
+</div>

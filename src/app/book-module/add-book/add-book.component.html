@@ -1,0 +1,71 @@
+<div>
+    <button (click) = "redirectToList()" mat-fab><mat-icon>home</mat-icon></button>
+</div>
+<div class="add-book">
+    <h1 class="page-title">Add a book</h1>
+    <form class="add-book-form" autocomplete="off">
+        <mat-form-field class="book-title">
+            <input
+                matInput
+                name="inpoutBook"
+                placeholder="Book title"
+                [(ngModel)]="title"
+            />
+        </mat-form-field>
+
+        
+        <mat-form-field class="book-description">
+            <textarea
+                matInput
+                name="inpoutBook"
+                placeholder="Book description"
+                [(ngModel)]="description"
+            ></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="book-authorName">
+            <textarea
+                matInput
+                name="inpoutBook"
+                placeholder="The name of the author of the book"                
+                [(ngModel)]="authorName"
+            ></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="book-publishedDate">
+            <input
+                matInput
+                name="inpoutBook"
+                placeholder="Published Date"                
+                [(ngModel)]="publishedDate"
+                type = "date"
+            />
+        </mat-form-field>
+    </form>
+
+    <div>
+        <button
+            class="add-book-button"
+            mat-raised-button
+            color="basic"
+            (click)="add()"
+        >
+            Add
+        </button>
+
+        <button
+            class="cancel-book-button"
+            mat-raised-button
+            color="basic"
+            (click)="cancel()"
+        >
+            Cancel
+        </button>
+    </div>
+    <div>
+        <h2 class = "errorMessage">
+            {{ validMessage }}
+        </h2>
+    </div>
+    
+</div>
